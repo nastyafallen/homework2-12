@@ -23,7 +23,7 @@ public class ServiceCalculator {
         return a * b;
     }
 
-    public String divide(Float a, Float b) throws MyIllegalArgumentException {
+    public String divide(Float a, Float b) throws MyIllegalArgumentException{
         if (Objects.isNull(a) || Objects.isNull(b)) {
             return "Неправильно переданы параметры!";
         }
