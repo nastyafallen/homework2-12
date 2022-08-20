@@ -26,27 +26,18 @@ public class CalculatorController {
     @GetMapping("/plus")
     public String plus(@RequestParam(value = "num1", required = false) Float a,
                        @RequestParam(value = "num2", required = false) Float b) {
-        if (Objects.isNull(a) || Objects.isNull(b)) {
-            return "Неправильно переданы параметры!";
-        }
         return a + " + " + b + " = " + serviceCalculator.plus(a, b);
     }
 
     @GetMapping("/minus")
     public String minus(@RequestParam(value = "num1", required = false) Float a,
                        @RequestParam(value = "num2", required = false) Float b) {
-        if (Objects.isNull(a) || Objects.isNull(b)) {
-            return "Неправильно переданы параметры!";
-        }
         return a + " - " + b + " = " + serviceCalculator.minus(a, b);
     }
 
     @GetMapping("/multiply")
     public String multiply(@RequestParam(value = "num1", required = false) Float a,
                        @RequestParam(value = "num2", required = false) Float b) {
-        if (Objects.isNull(a) || Objects.isNull(b)) {
-            return "Неправильно переданы параметры!";
-        }
         return a + " * " + b + " = " + serviceCalculator.multiply(a, b);
     }
 
